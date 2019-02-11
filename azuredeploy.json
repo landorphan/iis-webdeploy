@@ -15,7 +15,7 @@
       "metadata": {
         "description": "Password for the Virtual Machine."
       },
-      "defaultValue": "Pass!Word1"
+      "defaultValue": "Pass!Word001"
     },
     "machineName": {
       "type": "string",
@@ -38,21 +38,21 @@
     }
   },
   "variables": {
-    "dnsNameForPublicIP" : "[concat(parameters('machineName'), 'pip']",
+    "dnsNameForPublicIP" : "[concat(parameters('machineName'), 'pip')]",
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer",
     "OSDiskName": "osdiskforwindowssimple",
-    "nicName": "[concat(parameters('machineName'), 'VMNic']",
+    "nicName": "[concat(parameters('machineName'), 'VMNic'0]",
     "addressPrefix": "192.168.0.0/16",
     "subnetName": "Subnet",
     "subnetPrefix": "192.168.1.0/24",
     "vhdStorageType": "Standard_LRS",
-    "publicIPAddressName": "[concat(parameters('machineName'), 'pip']",
+    "publicIPAddressName": "[concat(parameters('machineName'), 'pip')]",
     "publicIPAddressType": "Dynamic",
     "vhdStorageContainerName": "vhds",
     "vmName": "parameters('machineName')",
     "vmSize": "Standard_B2s",
-    "virtualNetworkName": "[concat(parameters('machineName'), 'VNET']",
+    "virtualNetworkName": "[concat(parameters('machineName'), 'VNET'0]",
     "vnetId": "[resourceId('Microsoft.Network/virtualNetworks', variables('virtualNetworkName'))]",
     "subnetRef": "[concat(variables('vnetId'), '/subnets/', variables('subnetName'))]",
     "vhdStorageAccountName": "[concat(parameters('machineName'), uniqueString(resourceGroup().id))]",
