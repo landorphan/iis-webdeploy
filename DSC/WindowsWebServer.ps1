@@ -83,11 +83,11 @@
             DependsOn       = '[WindowsFeature]WebServerRole'
         } 
   
-        xWebsite DefaultSite   
+        xWebsite ClientSite   
         {  
             Ensure          = 'Present'
             Name            = 'website'
-            PhysicalPath    = 'C:\inetpub\wwwroot' 
+            PhysicalPath    = 'C:\inetpub\client' 
             DependsOn       = '[WindowsFeature]WebServerRole'
         }
 
